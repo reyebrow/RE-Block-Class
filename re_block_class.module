@@ -7,7 +7,8 @@
  * @author Colin Calnan, Raised Eyebrow Web Studio
  * 
  * Replace the text box for inputting classes with a drop down.
- * Currently the dropdown is hardcoded, would be nice to create admin area for that.
+ *
+ * @todo Currently the dropdown is hardcoded, would be nice to create admin area for that.
  **/
 
 function re_block_class_form_alter(&$form, &$form_state, $form_id) {
