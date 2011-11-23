@@ -19,18 +19,18 @@ function re_block_class_form_alter(&$form, &$form_state, $form_id) {
 
     $foundation_classes = array(
       '' => 'None',
-      'one' => 'one',
-      'two' => 'two',
-      'three' => 'three',
-      'four' => 'four',
-      'five' => 'five',
-      'six' => 'six',
-      'seven' => 'seven',
-      'eight' => 'eight',
-      'nine' => 'nine',
-      'ten' => 'ten',
-      'eleven' => 'eleven',
-      'twelve' => 'twelve',
+      'one' => t('one'),
+      'two' => t('two'),
+      'three' => t('three'),
+      'four' => t('four'),
+      'five' => t('five'),
+      'six' => t('six'),
+      'seven' => t('seven'),
+      'eight' => t('eight'),
+      'nine' => t('nine'),
+      'ten' => t('ten'),
+      'eleven' => t('eleven'),
+      'twelve' => t('twelve'),
     );
 
     $form['block_class']['css_class'] = array(
