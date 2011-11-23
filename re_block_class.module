@@ -1,0 +1,43 @@
+<?php
+
+/**     
+ * @file
+ * Modifies the Block Class module.
+ *
+ * @author Colin Calnan, Raised Eyebrow Web Studio
+ * 
+ * Replace the text box for inputting classes with a drop down.
+ * Currently the dropdown is hardcoded, would be nice to create admin area for that.
+ **/
+
+function re_block_class_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'block_admin_configure' || $form_id == 'block_add_block_form') {
+    $block->module = $form['module']['#value'];
+    $block->delta = $form['delta']['#value'];
+    $css_class = block_class($block);
+
+    $foundation_classes = array(
+      '' => 'None',
+      'one' => 'one',
+      'two' => 'two',
+      'three' => 'three',
+      'four' => 'four',
+      'five' => 'five',
+      'six' => 'six',
+      'seven' => 'seven',
+      'eight' => 'eight',
+      'nine' => 'nine',
+      'ten' => 'ten',
+      'eleven' => 'eleven',
+      'twelve' => 'twelve',
+    );
+
+    $form['block_class']['css_class'] = array(
+      '#type' => 'select',
+      '#title' => t('CSS class(es)'),
+      '#default_value' => $css_class,
+      '#options' => $foundation_classes,
+      '#description' => t('Choose how wide the block will be(in columns).'),
+    );        
+  }
+}

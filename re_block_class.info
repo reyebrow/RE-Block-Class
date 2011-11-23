@@ -1,0 +1,7 @@
+name = RE Block Class
+description = Allows assigning CSS classes, from the Foundation framework to blocks.
+core = 7.x
+dependencies[] = block_class
+package = Raised Eyebrow Custom Modules
+
+files[] = block_class.module
